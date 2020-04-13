@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="ChatApp" customModuleProvider="target">
+            <connections>
+                <outlet property="content" destination="aKZ-0G-Vfm" id="Cex-Yc-jdT"/>
+                <outlet property="menuWidth" destination="SrI-56-0nr" id="K29-dk-KDd"/>
+                <outlet property="tableView" destination="WRz-u6-lqp" id="ggi-Dd-0Dq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKZ-0G-Vfm" customClass="GradientView" customModule="ChatApp" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="260" height="568"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WRz-u6-lqp">
+                            <rect key="frame" x="0.0" y="0.0" width="245" height="514"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahY-IH-j00">
+                            <rect key="frame" x="0.0" y="514" width="115" height="54"/>
+                            <gestureRecognizers/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <inset key="contentEdgeInsets" minX="25" minY="15" maxX="25" maxY="15"/>
+                            <state key="normal" title="Logout">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <variation key="heightClass=regular-widthClass=regular">
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
+                            </variation>
+                            <connections>
+                                <action selector="logout:" destination="-1" eventType="touchUpInside" id="ewS-cz-yHx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="WRz-u6-lqp" secondAttribute="trailing" constant="15" id="2zq-Ht-1XQ"/>
+                        <constraint firstItem="ahY-IH-j00" firstAttribute="leading" secondItem="aKZ-0G-Vfm" secondAttribute="leading" id="MCE-Pt-Bb5"/>
+                        <constraint firstAttribute="width" constant="260" id="SrI-56-0nr"/>
+                        <constraint firstItem="WRz-u6-lqp" firstAttribute="top" secondItem="aKZ-0G-Vfm" secondAttribute="top" id="aDf-zf-qCl"/>
+                        <constraint firstItem="WRz-u6-lqp" firstAttribute="leading" secondItem="aKZ-0G-Vfm" secondAttribute="leading" id="jgU-bM-I5c"/>
+                        <constraint firstItem="ahY-IH-j00" firstAttribute="top" secondItem="WRz-u6-lqp" secondAttribute="bottom" id="lvm-aB-rHT"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                            <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                            <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="thirdColor">
+                            <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ahY-IH-j00" secondAttribute="bottom" id="Gee-HW-4uu"/>
+                <constraint firstItem="aKZ-0G-Vfm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Lqp-vZ-uSi"/>
+                <constraint firstAttribute="bottom" secondItem="aKZ-0G-Vfm" secondAttribute="bottom" id="oTh-kC-9rm"/>
+                <constraint firstItem="aKZ-0G-Vfm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ziJ-KV-yVh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="8" y="30"/>
+        </view>
+    </objects>
+</document>
